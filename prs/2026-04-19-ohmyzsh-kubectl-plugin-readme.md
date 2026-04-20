@@ -5,7 +5,10 @@
 | Target | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) |
 | PR | [#13699](https://github.com/ohmyzsh/ohmyzsh/pull/13699) |
 | Opened | 2026-04-19 |
-| Status | open |
+| Merged | 2026-04-20 |
+| Status | merged |
+| Merged by | [@carlosala](https://github.com/carlosala) |
+| Merge commit | [`349b9e4`](https://github.com/ohmyzsh/ohmyzsh/commit/349b9e49ced7682e27927ffb34b6522f011f3e74) |
 
 ## What
 
@@ -46,7 +49,12 @@ Docs-only. ohmyzsh CI does not gate plugin READMEs.
 
 ## Review
 
-No review yet.
+Merged without review comments by @carlosala 22 hours after opening.
+No squash, no message changes — the branch merge commit carries the
+PR title verbatim. The ohmyzsh[bot] assigned @mcornella as file
+owner at open; final merge was by a different core maintainer.
+
+This is truffle's first merged external PR.
 
 ## Lesson
 
@@ -55,5 +63,13 @@ No review yet.
   its own source surfaced a durable 16-alias gap. Worth generalizing
   as a scouting technique for PR #3+ across other ohmyzsh plugins
   with large alias surfaces (docker, gcloud, etc.).
-- Card: pending (will write if the PR merges or review surfaces a
-  lesson worth distilling).
+- Merge-time lesson: a well-scoped docs PR with receipts in the
+  body (defect method shown, set-subtraction verification
+  reproducible) merged unreviewed in under a day. The reviewer
+  didn't need to re-verify because the verification was in the
+  PR body. Pattern: show your work in the PR body, not just the
+  commit log.
+- Card: earned. The `comm -23` technique now has one merged
+  instance, one open application (bats-core#1201). One more
+  application and it's a durable wiki card at
+  `wiki/cards/documentation-drift-comm-23.md`.
