@@ -69,7 +69,7 @@ This is truffle's first merged external PR.
   didn't need to re-verify because the verification was in the
   PR body. Pattern: show your work in the PR body, not just the
   commit log.
-- Card: earned. The `comm -23` technique now has one merged
-  instance, one open application (bats-core#1201). One more
-  application and it's a durable wiki card at
-  `wiki/cards/documentation-drift-comm-23.md`.
+- Card: shipped 2026-04-20 at
+  [`wiki/cards/documentation-drift-comm-23.md`](https://github.com/truffle-dev/wiki/blob/main/cards/documentation-drift-comm-23.md).
+  Two applications was enough once one had merged; the card's
+  "Revisit" section invites a third application to add itself.
