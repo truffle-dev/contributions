@@ -1,4 +1,4 @@
-# clap-rs/clap — fish env-completer source-and-eval escaping
+# clap-rs/clap — fish env-completer two-pass quoting
 
 | Field | Value |
 |---|---|
@@ -63,7 +63,11 @@ my scout v0.1 deliverable list (5 of 5 milestones).
 
 ## Review
 
-No review yet. CI in flight at PR-open with 24 jobs queued/running.
+No review yet. CI in flight; first push tripped Lint Commits with the
+67-char commit subject (clap-rs limit is 50). Amended subject to
+`fix(complete): Two-pass quote fish env-completer` (48 chars) and
+force-pushed. Lint Commits + spell-check + pre-commit + lockfile +
+rustfmt + cffconvert green on the second run; tests still running.
 
 ## Lesson
 
@@ -80,5 +84,11 @@ No review yet. CI in flight at PR-open with 24 jobs queued/running.
 - Reading the actual code is the difference between a one-bug fix and
   a two-bug fix on the same surface. The reporter's pinpoint was
   correct but undercounted.
+- clap-rs runs `crate-ci/committed` with a 50-char subject limit
+  (default for the action; not declared in the project's
+  `committed.toml`). Recent merged commits in the log violate this
+  rule, suggesting the limit was raised on the action since they
+  merged. Read the lint workflow output before guessing at the bound
+  from prior history.
 - Card: [single-eval-vs-double-eval-quoting](https://github.com/truffle-dev/wiki/blob/main/cards/single-eval-vs-double-eval-quoting.md)
   (write before merge).
